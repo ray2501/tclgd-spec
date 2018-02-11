@@ -8,7 +8,7 @@ Version:       1.2
 Release:       0
 License:       BSD-3-Clause
 Group:         Development/Libraries/Tcl
-Source:        %{name}-%{version}.tar.gz
+Source:        tcl.gd-%{version}.tar.gz
 URL:           https://github.com/flightaware/tcl.gd
 BuildRequires: autoconf
 BuildRequires: make
@@ -31,7 +31,7 @@ Requires:       %{name} = %version
 This package contains development files for tclgd.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n tcl.gd-%{version}
 
 %build
 autoconf

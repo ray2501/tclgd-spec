@@ -1,21 +1,11 @@
 #!/usr/bin/tclsh
 
 set arch "x86_64"
-set base "tclgd-1.2"
+set base "tcl.gd-1.2"
+set fileurl "https://github.com/flightaware/tcl.gd/archive/v1.2.tar.gz"
 
-if {[file exists $base]} {
-    file delete -force $base
-}
-
-set var [list git clone https://github.com/flightaware/tcl.gd.git $base]
+set var [list wget $fileurl -O $base.tar.gz]
 exec >@stdout 2>@stderr {*}$var
-
-if {[file exists $base]} {
-    file delete -force $base/.git
-}
-
-set var2 [list tar czvf ${base}.tar.gz $base]
-exec >@stdout 2>@stderr {*}$var2
 
 if {[file exists build]} {
     file delete -force build
@@ -28,6 +18,5 @@ set buildit [list rpmbuild --target $arch --define "_topdir [pwd]/build" -bb tcl
 exec >@stdout 2>@stderr {*}$buildit
 
 # Remove our source code
-file delete -force $base
 file delete -force $base.tar.gz
 

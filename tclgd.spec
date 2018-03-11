@@ -14,6 +14,12 @@ BuildRequires: autoconf
 BuildRequires: make
 BuildRequires: tcl-devel >= 8.6
 BuildRequires: gd-devel
+%if 0%{?suse_version} >= 1500
+BuildRequires: freetype2-devel
+BuildRequires: fontconfig-devel
+BuildRequires: libXpm-devel
+BuildRequires: libX11-devel
+%endif
 Requires:      tcl >= 8.6
 Requires:      gd
 BuildRoot:     %{buildroot}

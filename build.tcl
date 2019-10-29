@@ -1,8 +1,8 @@
 #!/usr/bin/tclsh
 
 set arch "x86_64"
-set base "tcl.gd-1.2"
-set fileurl "https://github.com/flightaware/tcl.gd/archive/v1.2.tar.gz"
+set base "tcl.gd-1.3"
+set fileurl "https://github.com/flightaware/tcl.gd/archive/v1.3.tar.gz"
 
 set var [list wget $fileurl -O $base.tar.gz]
 exec >@stdout 2>@stderr {*}$var

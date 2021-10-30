@@ -4,7 +4,7 @@
 
 Name:          tclgd
 Summary:       Tcl interface to GD graphics drawing library
-Version:       1.3
+Version:       1.3.1
 Release:       0
 License:       BSD-3-Clause
 Group:         Development/Libraries/Tcl

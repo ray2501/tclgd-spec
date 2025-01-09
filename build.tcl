@@ -4,7 +4,7 @@ set arch "x86_64"
 set base "tcl.gd-1.3.1"
 set fileurl "https://github.com/flightaware/tcl.gd/archive/v1.3.1.tar.gz"
 
-set var [list wget $fileurl -O $base.tar.gz]
+set var [list wget2 $fileurl -O $base.tar.gz]
 exec >@stdout 2>@stderr {*}$var
 
 if {[file exists build]} {

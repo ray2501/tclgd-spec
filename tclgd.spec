@@ -4,7 +4,7 @@
 
 Name:          tclgd
 Summary:       Tcl interface to GD graphics drawing library
-Version:       1.3.1
+Version:       1.4.0
 Release:       0
 License:       BSD-3-Clause
 Group:         Development/Libraries/Tcl
@@ -59,7 +59,7 @@ rm -rf %buildroot
 %files
 %defattr(-,root,root)
 %{tcl_archdir}
-/usr/share/man/mann
+%{directory}/share/man/mann/tclgd.n.gz
 
 %files devel
 %defattr(-,root,root)
